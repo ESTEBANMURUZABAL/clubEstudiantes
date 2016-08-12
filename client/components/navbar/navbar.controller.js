@@ -16,9 +16,7 @@ class NavbarController {
     this.getCurrentUser = Auth.getCurrentUser;
   }
 
-  $('#navbar li').click(function() {
-  $(this).addClass('active').siblings('li').removeClass('active');
-});
+ 
 }
 
 angular.module('clubEstudiantesApp')

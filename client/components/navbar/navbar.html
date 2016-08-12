@@ -1,3 +1,4 @@
+<!--
 <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
   <div class="container">
     <div class="navbar-header">
@@ -15,6 +16,11 @@
             <a ui-sref="{{item.state}}">{{item.title}}</a>
         </li>
         <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">Admin</a></li>
+        <li ui-sref-active="active" ui-sref="contacto">Contacto</li>
+        <li ui-sref-active="active" ui-sref="deportes">Deportes</li>
+        <li ui-sref-active="active" ui-sref="elclub">El club</li>
+        <li ui-sref-active="active" ui-sref="instalaciones">instalaciones</li>
+        <li ui-sref-active="active" ui-sref="socios">Socios</li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -27,16 +33,30 @@
     </div>
   </div>
 </div>
-
-<!--<head>
-  <link rel="stylesheet" type="text/css" href="navbar.css">
-</head>
-<body>
-  <ul id="navbar">
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</body>
 -->
+
+<head>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+</head>
+<div class="navbar" ng-controller="NavbarController">
+  <div class="container">
+    <ul id="navbar">
+      <li ui-sref-active="active"><a ui-sref="/">Inicio</a></li>
+      <li ui-sref-active="active"><a ui-sref="elClub">El club</a></li>
+      <li ui-sref-active="active"><a ui-sref="deportes">Deportes</a></li>
+      <li ui-sref-active="active"><a ui-sref="instalaciones">Instalaciones</a></li>
+      <li ui-sref-active="active"><a ui-sref="socios">Socios</a></li>
+      <li ui-sref-active="active"><a ui-sref="contacto">Contacto</a></li>
+    </ul>
+
+
+
+    <!--<ul class="nav navbar-nav navbar-right">
+      <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
+      <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
+      <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
+      <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+      <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+    </ul>-->
+  </div>
+</div>

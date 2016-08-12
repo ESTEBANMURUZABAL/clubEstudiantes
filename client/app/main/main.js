@@ -3,7 +3,7 @@
 angular.module('clubEstudiantesApp')
   .config(function($stateProvider) {
     $stateProvider
-      .state('main', {
+      .state('/', {
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainController',
