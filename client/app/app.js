@@ -10,7 +10,8 @@ angular.module('clubEstudiantesApp', [
   'btford.socket-io',
   'ui.router',
   'ui.bootstrap',
-  'validation.match'
+  'validation.match',
+  'ngtweet'
 ])
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider

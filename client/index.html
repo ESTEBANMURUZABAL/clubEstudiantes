@@ -14,6 +14,7 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -23,12 +24,15 @@
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/contacto/contacto.css">
       <link rel="stylesheet" href="app/deportes/deportes.css">
+      <link rel="stylesheet" href="app/editar-equipo/editar-equipo.css">
       <link rel="stylesheet" href="app/elClub/elClub.css">
       <link rel="stylesheet" href="app/instalaciones/instalaciones.css">
       <link rel="stylesheet" href="app/main/main.css">
+      <link rel="stylesheet" href="app/mostrar-equipo/mostrar-equipo.css">
       <link rel="stylesheet" href="app/socios/socios.css">
       <link rel="stylesheet" href="components/footer/footer.css">
       <link rel="stylesheet" href="components/modal/modal.css">
+      <link rel="stylesheet" href="components/navbar/navbar.css">
       <!-- endinjector -->
     <!-- endbuild -->
   </head>
@@ -39,6 +43,9 @@
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
+    <br>
+    <br>
+    <br>
     <br>
     <div ui-view=""></div>
     <footer></footer>
@@ -70,8 +77,12 @@
       <script src="bower_components/angular-socket-io/socket.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
       <script src="bower_components/angular-validation-match/dist/angular-validation-match.min.js"></script>
+      <script src="bower_components/ngtweet/dist/ngtweet.js"></script>
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+     <script src="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"></script>
+      <script src="bower_components/ngtweet/dist/ngtweet.min.js"></script>
     <!-- endbuild -->
     <!-- build:js(.tmp) app/app.js -->
       <script src="app/app.js"></script>
@@ -88,12 +99,16 @@
       <script src="app/contacto/contacto.js"></script>
       <script src="app/deportes/deportes.controller.js"></script>
       <script src="app/deportes/deportes.js"></script>
+      <script src="app/editar-equipo/editar-equipo.controller.js"></script>
+      <script src="app/editar-equipo/editar-equipo.js"></script>
       <script src="app/elClub/elClub.controller.js"></script>
       <script src="app/elClub/elClub.js"></script>
       <script src="app/instalaciones/instalaciones.controller.js"></script>
       <script src="app/instalaciones/instalaciones.js"></script>
       <script src="app/account/login/login.controller.js"></script>
       <script src="app/main/main.js"></script>
+      <script src="app/mostrar-equipo/mostrar-equipo.controller.js"></script>
+      <script src="app/mostrar-equipo/mostrar-equipo.js"></script>
       <script src="app/socios/socios.controller.js"></script>
       <script src="app/socios/socios.js"></script>
       <script src="app/account/settings/settings.controller.js"></script>

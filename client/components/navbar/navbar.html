@@ -36,10 +36,14 @@
 -->
 
 <head>
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald"/>
+  <link rel="stylesheet" type="text/css" href="navbar.css"/>
 </head>
-<div class="navbar" ng-controller="NavbarController">
+<div class="navbar navbar-fixed-top" ng-controller="NavbarController">
   <div class="container">
+    <!--<div class="propaganda">
+      <img src="/assets/images/logo_estudiantes_fondo_transparente.png">
+    </div>-->
     <ul id="navbar">
       <li ui-sref-active="active"><a ui-sref="/">Inicio</a></li>
       <li ui-sref-active="active"><a ui-sref="elClub">El club</a></li>
@@ -48,6 +52,14 @@
       <li ui-sref-active="active"><a ui-sref="socios">Socios</a></li>
       <li ui-sref-active="active"><a ui-sref="contacto">Contacto</a></li>
     </ul>
+    <div class="top-navigation-right">
+      <a href="#" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+      <a href="#" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+      <a href="#" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+      <a href="#" class="icon-button youtube"><i class="fa fa-youtube"></i><span></span></a>
+      <a href="#" class="icon-button pinterest"><i class="fa fa-pinterest"></i><span></span></a>
+    </div>
+
 
 
 

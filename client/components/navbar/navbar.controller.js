@@ -16,7 +16,7 @@ class NavbarController {
     this.getCurrentUser = Auth.getCurrentUser;
   }
 
- 
+
 }
 
 angular.module('clubEstudiantesApp')

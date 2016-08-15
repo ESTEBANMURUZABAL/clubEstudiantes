@@ -4,6 +4,14 @@ angular.module('clubEstudiantesApp')
   .controller('MainController', function ($scope) {
     var self = $scope;
 
+    /* name: String,
+     escudoImagen: String,
+     fecha: Date,
+     puntos: Number,
+     info: String,
+     active: Boolean*/
+
+
 
 
 

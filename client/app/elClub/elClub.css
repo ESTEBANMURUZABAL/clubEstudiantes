@@ -2,3 +2,8 @@
   padding-left: 4%;
   padding-right: 3%;
 }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.news-item { display:inline-block; vertical-align:top; width:300px;}
