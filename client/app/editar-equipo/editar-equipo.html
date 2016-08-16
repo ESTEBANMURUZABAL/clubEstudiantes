@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="page-header">
+    <h1>Modifica la data de los equipos</h1>
+  </div>
+  <div class="col-md-12">
+    <form class="form-horizontal" data-ng-submit="create()" novalidate>
+      <fieldset>
+        <div class="form-group">
+          <label class="control-label" for="nombre">Nombre del club</label>
+          <div class="controls">
+            <input type="text" data-ng-model="equipo.nombre" id="nombre" class="form-control" placeholder="nombre" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="puntos">Puntos</label>
+          <div class="controls">
+            <input type="text" data-ng-model="equipo.puntos" id="puntos" class="form-control" placeholder="puntos" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="proxFecha">Proxima fecha</label>
+          <div class="controls">
+            <input type="text" data-ng-model="equipo.proxFecha" id="name" class="form-control" placeholder="proxFecha" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="descripcion">Descripcion</label>
+          <div class="controls">
+            <input type="text" data-ng-model="equipo.descripcion" id="descripcion" class="form-control" placeholder="descripcion" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label" for="escudo">Escudo del club (20x20)</label>
+          <div class="controls">
+            <input type="file" data-ng-model="equipo.escudo" id="escudo" class="form-control" placeholder="escudo" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="btn btn-default">
+        </div>
+        <div data-ng-show="error" class="text-danger">
+          <strong data-ng-bind="error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

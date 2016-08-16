@@ -1,0 +1,147 @@
+'use strict';
+
+var app = require('../..');
+import request from 'supertest';
+
+var newEquipo;
+
+describe('Equipo API:', function() {
+
+  describe('GET /api/equipos', function() {
+    var equipos;
+
+    beforeEach(function(done) {
+      request(app)
+        .get('/api/equipos')
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .end((err, res) => {
+          if (err) {
+            return done(err);
+          }
+          equipos = res.body;
+          done();
+        });
+    });
+
+    it('should respond with JSON array', function() {
+      equipos.should.be.instanceOf(Array);
+    });
+
+  });
+
+  describe('POST /api/equipos', function() {
+    beforeEach(function(done) {
+      request(app)
+        .post('/api/equipos')
+        .send({
+          name: 'New Equipo',
+          info: 'This is the brand new equipo!!!'
+        })
+        .expect(201)
+        .expect('Content-Type', /json/)
+        .end((err, res) => {
+          if (err) {
+            return done(err);
+          }
+          newEquipo = res.body;
+          done();
+        });
+    });
+
+    it('should respond with the newly created equipo', function() {
+      newEquipo.name.should.equal('New Equipo');
+      newEquipo.info.should.equal('This is the brand new equipo!!!');
+    });
+
+  });
+
+  describe('GET /api/equipos/:id', function() {
+    var equipo;
+
+    beforeEach(function(done) {
+      request(app)
+        .get('/api/equipos/' + newEquipo._id)
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .end((err, res) => {
+          if (err) {
+            return done(err);
+          }
+          equipo = res.body;
+          done();
+        });
+    });
+
+    afterEach(function() {
+      equipo = {};
+    });
+
+    it('should respond with the requested equipo', function() {
+      equipo.name.should.equal('New Equipo');
+      equipo.info.should.equal('This is the brand new equipo!!!');
+    });
+
+  });
+
+  describe('PUT /api/equipos/:id', function() {
+    var updatedEquipo;
+
+    beforeEach(function(done) {
+      request(app)
+        .put('/api/equipos/' + newEquipo._id)
+        .send({
+          name: 'Updated Equipo',
+          info: 'This is the updated equipo!!!'
+        })
+        .expect(200)
+        .expect('Content-Type', /json/)
+        .end(function(err, res) {
+          if (err) {
+            return done(err);
+          }
+          updatedEquipo = res.body;
+          done();
+        });
+    });
+
+    afterEach(function() {
+      updatedEquipo = {};
+    });
+
+    it('should respond with the updated equipo', function() {
+      updatedEquipo.name.should.equal('Updated Equipo');
+      updatedEquipo.info.should.equal('This is the updated equipo!!!');
+    });
+
+  });
+
+  describe('DELETE /api/equipos/:id', function() {
+
+    it('should respond with 204 on successful removal', function(done) {
+      request(app)
+        .delete('/api/equipos/' + newEquipo._id)
+        .expect(204)
+        .end((err, res) => {
+          if (err) {
+            return done(err);
+          }
+          done();
+        });
+    });
+
+    it('should respond with 404 when equipo does not exist', function(done) {
+      request(app)
+        .delete('/api/equipos/' + newEquipo._id)
+        .expect(404)
+        .end((err, res) => {
+          if (err) {
+            return done(err);
+          }
+          done();
+        });
+    });
+
+  });
+
+});
