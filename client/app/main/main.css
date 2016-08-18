@@ -11,43 +11,37 @@
   margin-left: 4%;
   margin-right: 3%;
 }
-
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {}
-
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {}
-
-/* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {}
-
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}
-
-/*                  table de posiciones                   */
-
+/*                  fixture                   */
 .box {
   border: solid;
   border-width: 10px;
   color: #d30600;
   margin-top: 1%;
   background-color:#d3582b;
+  width: 100%;
 }
 
+/*                  horarios                               */
+.fixture  {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.horarios {
+  padding-right: 0px;
+  padding-left: 0px;
+}
 /*                  noticias                               */
-
 .noticias {
   border: solid;
   color: #d34836;
-  margin-top: 0.5%;
-  margin-left: 4%;
-  margin-right: 3%;
   box-sizing: content-box;
 }
 
+.container-fluid {
+  padding-right: 0px;
+  padding-left: 22px;
+}
+/*                  twitter                               */
 .twitter {
   margin-top: 0.5%;
   color: #d34836;
@@ -80,3 +74,24 @@ a.twitter-timeline:focus {
   outline: none;
   border-color: #0089cb;
 }
+
+.news-item {
+  display:inline-block;
+  vertical-align:top;
+  width:250px;}
+
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
