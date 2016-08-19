@@ -12,7 +12,6 @@
 
 <div class="container-fluid">
 
-      <div>
         <div class="col-md-8">
 
           <div class="col-md-6">
@@ -94,15 +93,16 @@
           <div >
             <div class="col-md-12">
               <div class="noticias">
-                <select name="sort-news" id="sort-news">
+              <!--  <select name="sort-news" id="sort-news">
                   <option value="All">All news</option>
                   <option value="Cat1">Category 1</option>
                   <option value="Cat2">Category 2</option>
                   <option value="Cat3">Category 3</option>
                 </select>
-                <hr />
-                <section class="news-list">
-                  <article class="news-item" data-category="Cat1">
+                <hr/>-->
+                <section class="news-list col-md-12">
+
+                  <div class="news-item col-md-4" data-category="Cat1">
                     <div class="thumb">
                       <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
                     </div>
@@ -110,8 +110,9 @@
                       <h3><a href="">A news title</a></h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                     </div>
-                  </article>
-                  <article class="news-item" data-category="Cat2">
+                  </div>
+
+                  <div class="news-item col-md-4" data-category="Cat2">
                     <div class="thumb">
                       <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
                     </div>
@@ -119,8 +120,9 @@
                       <h3><a href="">A news title</a></h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                     </div>
-                  </article>
-                  <article class="news-item" data-category="Cat3">
+                  </div>
+
+                  <div class="news-item col-md-4" data-category="Cat3">
                     <div class="thumb">
                       <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
                     </div>
@@ -128,32 +130,31 @@
                       <h3><a href="">A news title</a></h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                     </div>
-                  </article>
+                  </div>
+
                 </section>
-                <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-12/jquery-2.0.3.min_1.js"></script>
+
               </div>
             </div>
           </div>
 
         </div>
 
-        <div class="col-md-4">
-          <div class="twitter">
-            <!--https://dev.twitter.com/web/embedded-timelines/parameters -->
-            <!-- http://arusahni.github.io/ngtweet/ -->
-            <twitter-timeline
-              twitter-timeline-options='{"chrome": "hidden"}'>
-              <a class="twitter-timeline"
-                 href="https://twitter.com/IAmAru/lists/food-trucks"
-                 data-widget-id="673710543212052480"
-                 data-chrome="noheader nofooter noborders"
-                 lang="ES"
-                 data-border-color="#d30600">
-              </a>
-              <twitter-timeline>
-          </div>
+        <div class="col-md-4 twitter">
+          <!--https://dev.twitter.com/web/embedded-timelines/parameters -->
+          <!-- http://arusahni.github.io/ngtweet/ -->
+          <twitter-timeline
+            twitter-timeline-options='{"chrome": "hidden"}'>
+            <a class="twitter-timeline"
+               href="https://twitter.com/IAmAru/lists/food-trucks"
+               data-widget-id="673710543212052480"
+               data-chrome="noheader nofooter noborders"
+               lang="ES"
+               data-border-color="#d30600">
+            </a>
+            <twitter-timeline>
         </div>
-      </div>
+
 
 
 

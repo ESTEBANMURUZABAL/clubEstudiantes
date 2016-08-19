@@ -32,8 +32,6 @@
 }
 /*                  noticias                               */
 .noticias {
-  border: solid;
-  color: #d34836;
   box-sizing: content-box;
 }
 
@@ -43,8 +41,10 @@
 }
 /*                  twitter                               */
 .twitter {
-  margin-top: 0.5%;
-  color: #d34836;
+  padding-left: 0px;
+  padding-right: 40px;
+  padding-top: 4px;
+
 }
 
 a.twitter-timeline {
@@ -76,9 +76,13 @@ a.twitter-timeline:focus {
 }
 
 .news-item {
-  display:inline-block;
   vertical-align:top;
-  width:250px;}
+  width:260px;
+}
+
+.sort-news {
+  float: right;
+}
 
 
 /* Smaller than standard 960 (devices and browsers) */
