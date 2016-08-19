@@ -1,28 +1,42 @@
 'use strict';
 
 angular.module('clubEstudiantesApp')
-  .controller('ContactoCtrl', function ($scope, $http) {
-   $scope.postData = {};
+  .controller('ContactoCtrl', function ($scope, $http, ContactoService, socket, $state, $stateParams, Auth) {
+   var self = $scope;
+   self.newContacto = {};
 
+    self.isAdmin = Auth.isAdmin;
 
-    //http://stackoverflow.com/questions/26326027/sending-email-with-node-mailer-and-sendgrid-in-angular-mean-stack-using-angular
-    //http://stackoverflow.com/questions/27861722/creating-a-contact-form-in-angular-with-nodemailer
+   ContactoService.query(function(contactos){
+       self.contactos = contactos;
+       socket.syncUpdates('contact', self.contactos);
+   });
 
-    $scope.postMail = function (contact) {
-      // Check form validation
-      if ($scope.contactForm.$invalid === true) {
-        return
-      }
-      // wrap all your input values in $scope.postData
-      $scope.postData = angular.copy(contact);
+     self.addContacto = function(){
+       if(!self.newContacto){ return;}
+       ContactoService.save(self.newContacto, function(){
+         self.newContacto = {};
+       });
+     };
 
-      $http.post('/api/contact', $scope.postData)
-        .success(function(data) {
-          // Show success message
-        })
-        .error(function(data) {
-          // Show error message
-        });
+     self.deleteContacto = function(contacto) {
+       ContactoService.delete({id:contacto._id}, function(){
+         console.log('contacto deleted')
+       })
+     };
+
+     self.goToContacto = function(contacto){
+       $state.go('view-contacto', {
+         id: contacto._id
+       });
+     };
+
+    self.goBack = function(){
+      window.history.back();
     };
+
+     self.$on('$destroy', function() {
+          socket.unsyncUpdates('Contacto');
+     });
 
   });

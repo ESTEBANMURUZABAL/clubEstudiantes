@@ -1,15 +1,11 @@
-.tales {
-  width: 100%;
-}
 .carousel-inner{
-  width: 1351px;
+  width: 100%;
   max-height: 400px !important;
 }
 
 .propaganda {
   margin-top: 0.5%;
-  margin-left: 4%;
-  margin-right: 3%;
+  width:100%;
 }
 /*                  fixture                   */
 .box {
@@ -36,7 +32,7 @@
 }
 
 .container-fluid {
-  padding-right: 0px;
+  padding-right: 22px;
   padding-left: 22px;
 }
 /*                  twitter                               */
