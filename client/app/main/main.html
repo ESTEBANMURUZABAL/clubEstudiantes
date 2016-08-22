@@ -1,157 +1,159 @@
 <div class="container-fluid">
-  <div carousel class="carousel-inner" active="active" interval="myInterval" no-wrap="noWrapSlides">
-    <div slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-      <img ng-src="{{slide.image}}" class="tales">
-      <div class="carousel-caption">
-
-      </div>
-    </div>
-  </div>
-
-  <div class="propaganda">
-    <img src="/assets/images/rsz_propaganda.png">
-  </div>
-
-  <div class="col-md-8">
-
-    <div class="col-md-6">
-      <div class="fixture">
-        <table class="table box">
-          <thead>
-          <tr>
-            <th>Equipo</th>
-            <th>Puntos</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="active">
-            <td>River Plate</td>
-            <td>1</td>
-          </tr>
-          <tr class="active">
-            <td>Boca Juniors</td>
-            <td>3</td>
-          </tr>
-          <tr class="active">
-            <td>Independiente</td>
-            <td>0</td>
-          </tr>
-          <tr class="active">
-            <td>Club Estudiantes</td>
-            <td>8</td>
-          </tr>
-          <tr class="active">
-            <td>Racing</td>
-            <td>6</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <div class="horarios">
-        <table class="table box">
-          <thead>
-          <tr>
-            <th>Horario</th>
-            <th>Fecha</th>
-            <th>Equipos</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr class="active">
-            <td>04/01</td>
-            <td>16:00</td>
-            <td>boca-river</td>
-          </tr>
-          <tr class="active">
-            <td>04/01</td>
-            <td>16:00</td>
-            <td>Dep del valle-independiente</td>
-          </tr>
-          <tr class="active">
-            <td>04/01</td>
-            <td>16:00</td>
-            <td>racing-lanus</td>
-          </tr>
-          <tr class="active">
-            <td>04/01</td>
-            <td>16:00</td>
-            <td>club estudiantes-atl nacional</td>
-          </tr>
-          <tr class="active">
-            <td>04/01</td>
-            <td>16:00</td>
-            <td>club navalgina-rivadavia</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <div >
-      <div class="col-md-12">
-        <div class="noticias">
-        <!--  <select name="sort-news" id="sort-news">
-            <option value="All">All news</option>
-            <option value="Cat1">Category 1</option>
-            <option value="Cat2">Category 2</option>
-            <option value="Cat3">Category 3</option>
-          </select>
-          <hr/>-->
-          <section class="news-list ">
-
-            <div class="news-item col-md-4" data-category="Cat1">
-              <div class="thumb">
-                <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
-              </div>
-              <div class="news-txt">
-                <h3><a href="">A news title</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-              </div>
-            </div>
-
-            <div class="news-item col-md-4" data-category="Cat2">
-              <div class="thumb">
-                <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
-              </div>
-              <div class="news-txt">
-                <h3><a href="">A news title</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-              </div>
-            </div>
-
-            <div class="news-item col-md-4" data-category="Cat3">
-              <div class="thumb">
-                <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
-              </div>
-              <div class="news-txt">
-                <h3><a href="">A news title</a></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-              </div>
-            </div>
-
-          </section>
+  <div class="main">
+    <div carousel class="carousel-inner" active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img ng-src="{{slide.image}}" class="tales">
+        <div class="carousel-caption">
 
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-md-4 twitter">
-    <!--https://dev.twitter.com/web/embedded-timelines/parameters -->
-    <!-- http://arusahni.github.io/ngtweet/ -->
-    <twitter-timeline
-      twitter-timeline-options='{"chrome": "hidden"}'>
-      <a class="twitter-timeline"
-         href="https://twitter.com/IAmAru/lists/food-trucks"
-         data-widget-id="673710543212052480"
-         data-chrome="noheader nofooter noborders"
-         lang="ES"
-         data-border-color="#d30600">
-      </a>
+    <div class="propaganda">
+      <img ng-src="/assets/images/rsz_propaganda.png">
+    </div>
+
+    <div class="col-md-8">
+
+      <div class="col-md-6">
+        <div class="fixture">
+          <table class="table box">
+            <thead>
+            <tr>
+              <th>Equipo</th>
+              <th>Puntos</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="active">
+              <td>River Plate</td>
+              <td>1</td>
+            </tr>
+            <tr class="active">
+              <td>Boca Juniors</td>
+              <td>3</td>
+            </tr>
+            <tr class="active">
+              <td>Independiente</td>
+              <td>0</td>
+            </tr>
+            <tr class="active">
+              <td>Club Estudiantes</td>
+              <td>8</td>
+            </tr>
+            <tr class="active">
+              <td>Racing</td>
+              <td>6</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="horarios">
+          <table class="table box">
+            <thead>
+            <tr>
+              <th>Horario</th>
+              <th>Fecha</th>
+              <th>Equipos</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="active">
+              <td>04/01</td>
+              <td>16:00</td>
+              <td>boca-river</td>
+            </tr>
+            <tr class="active">
+              <td>04/01</td>
+              <td>16:00</td>
+              <td>Dep del valle-independiente</td>
+            </tr>
+            <tr class="active">
+              <td>04/01</td>
+              <td>16:00</td>
+              <td>racing-lanus</td>
+            </tr>
+            <tr class="active">
+              <td>04/01</td>
+              <td>16:00</td>
+              <td>club estudiantes-atl nacional</td>
+            </tr>
+            <tr class="active">
+              <td>04/01</td>
+              <td>16:00</td>
+              <td>club navalgina-rivadavia</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div >
+        <div class="col-md-12">
+          <div class="noticias">
+            <!--  <select name="sort-news" id="sort-news">
+                <option value="All">All news</option>
+                <option value="Cat1">Category 1</option>
+                <option value="Cat2">Category 2</option>
+                <option value="Cat3">Category 3</option>
+              </select>
+              <hr/>-->
+            <section class="news-list ">
+
+              <div class="news-item col-md-4" data-category="Cat1">
+                <div class="thumb">
+                  <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
+                </div>
+                <div class="news-txt">
+                  <h3><a href="">A news title</a></h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+              </div>
+
+              <div class="news-item col-md-4" data-category="Cat2">
+                <div class="thumb">
+                  <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
+                </div>
+                <div class="news-txt">
+                  <h3><a href="">A news title</a></h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+              </div>
+
+              <div class="news-item col-md-4" data-category="Cat3">
+                <div class="thumb">
+                  <img alt="Our ALT text here" title="Our title here" src="http://placehold.it/150x150">
+                </div>
+                <div class="news-txt">
+                  <h3><a href="">A news title</a></h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
+                </div>
+              </div>
+
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 twitter">
+      <!--https://dev.twitter.com/web/embedded-timelines/parameters -->
+      <!-- http://arusahni.github.io/ngtweet/ -->
+      <twitter-timeline
+        twitter-timeline-options='{"chrome": "hidden"}'>
+        <a class="twitter-timeline"
+           href="https://twitter.com/IAmAru/lists/food-trucks"
+           data-widget-id="673710543212052480"
+           data-chrome="noheader nofooter noborders"
+           lang="ES"
+           data-border-color="#d30600">
+        </a>
       </twitter-timeline>
+    </div>
   </div>
 
 </div>

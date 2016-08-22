@@ -2,7 +2,10 @@
   padding-left: 4%;
   padding-right: 3%;
 }
-
+.main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 /* The side navigation menu */
 .left-side {
 /*  height: 100%; *//* 100% Full-height *//*

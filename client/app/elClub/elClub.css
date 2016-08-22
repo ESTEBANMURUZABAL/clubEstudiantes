@@ -3,3 +3,20 @@
   padding-right: 3%;
 }
 
+.main {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+.title {
+@font-face {
+  font-family: Gotham;
+  src: url(../fonts/gothammedium.eot);
+  src: url(../fonts/Gotham-Medium.ttf);
+}
+}
+
+#history-content {
+
+}
