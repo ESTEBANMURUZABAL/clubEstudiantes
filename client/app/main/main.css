@@ -32,9 +32,11 @@
 }
 
 .container-fluid {
-  padding-right: 22px;
-  padding-left: 22px;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-top: 0px;
 }
+
 /*                  twitter                               */
 .twitter {
   padding-left: 0px;
@@ -79,10 +81,7 @@ a.twitter-timeline:focus {
 .sort-news {
   float: right;
 }
-.main {
-  margin-left: 5%;
-  margin-right: 5%;
-}
+
 
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {}

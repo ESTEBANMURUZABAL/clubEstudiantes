@@ -1,14 +1,20 @@
+#logo {
+width: 120px;
+height:120px;
+position: absolute;
+top: 80px;
+}
 
 #navbar {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
   right: 0px;
   height: 60px;
   margin: 0;
   padding: 0;
   list-style: none;
-  background: #d34836;
+  background-color: #d34836;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -213,5 +219,5 @@
 .top-navigation-right {
   position: absolute;
   right: 15px;
-  top: 20px;
+  top: 12px;
 }
