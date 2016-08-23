@@ -6,6 +6,11 @@ top: 80px;
 left:20px;
 }
 
+.navbar {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
 #navbar {
   position: absolute;
   top: 0px;

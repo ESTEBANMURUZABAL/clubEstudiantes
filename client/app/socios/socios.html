@@ -4,53 +4,53 @@
       <h1>¡HACETE SOCIO!</h1>
       <h4>Completá el formulario a continuación con tus datos y recibirás un correo electrónico con los pasos a seguir para avanzar en tu inscripción.</h4>
     </div>
-    <div>
-      <img class="banner-socios" ng-src="/assets/images/bannerSocios.png" alt=""/>
-      <img class="banner-socios2" ng-src="/assets/images/bannerSocio2.png" alt=""/>
-    </div>
-
     <div class="row">
-      <div class="col-md-12">
+
+    <img class="banner-socios" ng-src="/assets/images/bannerSocios.png" alt=""/>
+    <img class="banner-socios2" ng-src="/assets/images/bannerSocio2.png" alt=""/>
+
+      <div class="col-md-4" align="left">
         <form class="form-horizontal" data-ng-submit="create()" novalidate>
           <fieldset>
             <div class="form-group">
               <label class="control-label" for="name">Nombre</label>
               <div class="controls">
-                <input type="text" data-ng-model="nuevoSocio.name" id="name" class="form-control" placeholder="Tu nombre y apellido!" required>
+                <input type="text" data-ng-model="nuevoSocio.name" id="name" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="name">Email</label>
               <div class="controls">
-                <input type="email" data-ng-model="nuevoSocio.name" id="name" class="form-control" placeholder="Direccion de correo!" required>
+                <input type="email" data-ng-model="nuevoSocio.email" id="email" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="dob">Nacimiento</label>
               <div class="controls">
-                <input type="date" data-ng-model="nuevoSocio.dob" id="dob" class="form-control" placeholder="Tu fecha de nacimiento!" required>
+                <input type="date" data-ng-model="nuevoSocio.dob" id="dob" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="dob">Contacto</label>
               <div class="controls">
-                <input type="number" data-ng-model="nuevoSocio.tel" id="tel" class="form-control" placeholder="Tu numero de celular o fijo!" required>
+                <input type="number" data-ng-model="nuevoSocio.tel" id="tel" class="form-control" required>
               </div>
             </div>
 
-            <div class="form-group">
+
+          <!--  <div class="form-group">
               <input type="submit" class="btn btn-default">
             </div>
             <div data-ng-show="error" class="text-danger">
               <strong data-ng-bind="error"></strong>
-            </div>
+            </div>-->
           </fieldset>
+          <button class="btn btn-success" ng-click="addContacto()">Enviar</button>
         </form>
       </div>
     </div>
-
   </div>
 </div>

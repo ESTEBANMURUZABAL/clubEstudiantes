@@ -1,17 +1,16 @@
 'use strict';
 
-angular.module('clubEstudiantesApp')
-  .controller('MainController', function ($scope, $location, Auth) {
-    var self = $scope;
+class NavbarController {
+  //start-non-standard
 
-
-
-  constructor() {
+  constructor(Auth) {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
   }
 
-  console.log($location);
 
-});
+}
+
+angular.module('clubEstudiantesApp')
+  .controller('NavbarController', NavbarController);
