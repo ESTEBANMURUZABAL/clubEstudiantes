@@ -1,23 +1,17 @@
 'use strict';
 
-class NavbarController {
-  //start-non-standard
-  menu = [{
-    'title': 'Home',
-    'state': 'main'
-  }];
+angular.module('clubEstudiantesApp')
+  .controller('MainController', function ($scope, $location, Auth) {
+    var self = $scope;
 
-  isCollapsed = true;
-  //end-non-standard
 
-  constructor(Auth) {
+
+  constructor() {
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
     this.getCurrentUser = Auth.getCurrentUser;
   }
 
+  console.log($location);
 
-}
-
-angular.module('clubEstudiantesApp')
-  .controller('NavbarController', NavbarController);
+});
