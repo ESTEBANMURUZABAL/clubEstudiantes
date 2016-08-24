@@ -16,6 +16,11 @@ angular.module('clubEstudiantesApp')
           image: '/assets/images/rsz_home1.png',
           text: ['texto 1'],
           id: currIndex++
+        },
+        {
+          image: '/assets/images/homeImage.png',
+          text: ['texto 1'],
+          id: currIndex++
         }
       );
     };
