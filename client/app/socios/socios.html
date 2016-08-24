@@ -9,7 +9,7 @@
 
     <img class="banner-socios" ng-src="/assets/images/bannerSocios.png" alt=""/>
 
-      <section data-ng-show="isAdmin" data-ng-init="find">
+      <section data-ng-show="isAdmin" data-ng-init="">
         <h2>Socios</h2>
         <div ng-repeat="socio in socios">
           <div class="box-socios">
@@ -17,7 +17,7 @@
             <h5 class="media-heading">Socio name:{{socio.name}}</h5>
             <h5 class="media-heading">Socio email:{{socio.email}}</h5>
             <h5 class="media-heading">Socio phone:{{socio.phone}}</h5>
-            <h5 class="media-heading">Socio dob:{{socio.dob}}</h5>
+            <h5 class="media-heading">Socio dob:{{socio.dob| date:'MM/dd/yyyy'}}</h5>
             <button class="btn btn-success" ng-click="deleteSocio(socio)">Delete</button>
             Refresh after deleting messages (tell dev to fix this to do automatically)
           </div>
@@ -27,38 +27,37 @@
       </section>
 
       <div class="col-md-4" align="left">
-        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+        <form class="form-horizontal" novalidate>
           <fieldset>
             <div class="form-group">
               <label class="control-label" for="name">Nombre</label>
               <div class="controls">
-                <input type="text" data-ng-model="nuevoSocio.name" id="name" class="form-control" required>
+                <input type="text" data-ng-model="newSocio.name" id="name" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="email">Email</label>
               <div class="controls">
-                <input type="email" data-ng-model="nuevoSocio.email" id="email" class="form-control" required>
+                <input type="email" data-ng-model="newSocio.email" id="email" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="dob">Nacimiento</label>
               <div class="controls">
-                <input type="date" data-ng-model="nuevoSocio.dob" id="dob" class="form-control" required>
+                <input type="date" data-ng-model="newSocio.dob" id="dob" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
-              <label class="control-label" for="phone">Contacto</label>
+              <label class="control-label" for="phone">Número de teléfono:</label>
               <div class="controls">
-                <input type="number" data-ng-model="nuevoSocio.phone" id="phone" class="form-control" required>
+                <input type="number" data-ng-model="newSocio.phone" id="phone" class="form-control" required>
               </div>
             </div>
-
+            <button class="btn btn-success" ng-click="addSocio()">Enviar</button>
           </fieldset>
-          <button class="btn btn-success" ng-click="addContacto()">Enviar</button>
         </form>
       </div>
     </div>

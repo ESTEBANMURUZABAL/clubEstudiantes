@@ -1,16 +1,12 @@
 'use strict';
 
-class NavbarController {
-  //start-non-standard
-
-  constructor(Auth) {
-    this.isLoggedIn = Auth.isLoggedIn;
-    this.isAdmin = Auth.isAdmin;
-    this.getCurrentUser = Auth.getCurrentUser;
-  }
-
-
-}
-
 angular.module('clubEstudiantesApp')
-  .controller('NavbarController', NavbarController);
+  .controller('NavbarController', function ($scope, $http, socket, $state, Auth, $location) {
+   var self = $scope;
+
+   self.url = $location.url();
+   self.isHomePage = function(){
+    if($location.url() === "") return true;
+    else false;
+   }
+});
