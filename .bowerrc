@@ -1,8 +1,4 @@
 {
-    "directory": "client/bower_components",
-    "proxy":"http://172.18.225.251:3128",
-    "https-proxy":"https://172.18.225.251:3128",
-    "registry": "http://bower.herokuapp.com",
-	"strict-ssl": false
+    "directory": "client/bower_components"
 }
 

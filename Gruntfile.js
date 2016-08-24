@@ -221,7 +221,8 @@ module.exports = function (grunt) {
         exclude: [
           /bootstrap.js/,
           '/json3/',
-          '/es5-shim/'
+          '/es5-shim/',
+          /font-awesome\.css/
         ]
       },
       client: {

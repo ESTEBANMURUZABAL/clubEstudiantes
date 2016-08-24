@@ -1,9 +1,9 @@
-#yourElement {
-  vendor-animation-duration: 3s;
-  vendor-animation-delay: 2s;
-  vendor-animation-iteration-count: infinite;
+.container-fluid {
+  padding-left: 4%;
+  padding-right: 3%;
 }
+
 .main {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
