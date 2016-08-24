@@ -6,6 +6,6 @@ angular.module('clubEstudiantesApp')
       .state('mostrar-equipo', {
         url: '/mostrar-equipo',
         templateUrl: 'app/mostrar-equipo/mostrar-equipo.html',
-        controller: 'MostrarEquipoCtrl'
+        controller: 'EquipoCtrl'
       });
   });

@@ -1,37 +1,36 @@
 'use strict';
 
 angular.module('clubEstudiantesApp')
-  .controller('MainController', function ($scope) {
+  .controller('MainController', function ($scope, Auth) {
     var self = $scope;
 
-    $scope.myInterval = 3000;
-    $scope.noWrapSlides = false;
-    $scope.active = 0;
-    var slides = $scope.slides = [];
-    var currIndex = 0;
+    self.isAdmin = Auth.isAdmin;
 
-    $scope.addSlide = function() {
+    self.myInterval = 3000;
+    self.noWrapSlides = false;
+    self.active = 0;
+    var slides = self.slides = [];
+
+    self.addSlide = function() {
 
       slides.push({
           image: '/assets/images/rsz_home1.png',
           text: ['texto 1'],
-          id: currIndex++
-        },
+        }/*,
         {
           image: '/assets/images/homeImage.png',
           text: ['texto 1'],
-          id: currIndex++
-        }
+        }*/
       );
     };
 
-    $scope.randomize = function() {
+    self.randomize = function() {
       var indexes = generateIndexesArray();
       assignNewIndexesToSlides(indexes);
     };
 
     for (var i = 0; i < 1; i++) {
-      $scope.addSlide();
+      self.addSlide();
     }
 
     // Randomize logic below
