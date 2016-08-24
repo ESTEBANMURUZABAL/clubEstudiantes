@@ -5,35 +5,53 @@
       <div class="page-header">
         <h1>¡CONTACTANOS!</h1>
       </div>
+
+      <section data-ng-show="isAdmin" data-ng-init="find">
+        <h2>Contactos</h2>
+        <div ng-repeat="contacto in contactos">
+          <div class="box-contactos">
+            <h4 class="media-heading">Contacto id:{{contacto._id}}</h4>
+            <h5 class="media-heading">Contacto name:{{contacto.name}}</h5>
+            <h5 class="media-heading">Contacto email:{{contacto.email}}</h5>
+            <h5 class="media-heading">Contacto phone:{{contacto.phone}}</h5>
+            <h5>Mensaje: {{contacto.message}}</h5>
+            <button class="btn btn-success" ng-click="deleteContacto(contacto)">Delete</button>
+            Refresh after deleting messages (tell dev to fix this to do automatically)
+          </div>
+        </div>
+        <br>
+        <br>
+      </section>
+
       <div data-ng-show="!isLoggedIn">
         <div class="left-side col-md-4">
-          <form class="form-horizontal" data-ng-submit="addContacto()" novalidate>
+          <form class="form-horizontal" novalidate>
             <fieldset>
               <div class="form-group">
                 <label class="control-label" for="name">Nombre y Apellido:</label>
                 <div class="controls">
-                  <input type="text" data-ng-model="newContacto.name" id="name" class="form-control" placeholder="" required>
+                  <input type="text" data-ng-model="newContacto.name" id="name" class="form-control" required>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="control-label" for="name">Correo electrónico:</label>
                 <div class="controls">
-                  <input type="text" data-ng-model="newContacto.email" id="email" class="form-control" placeholder="" required>
+                  <input type="email" data-ng-model="newContacto.email" id="email" class="form-control" required>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="control-label" for="name">Teléfono:</label>
                 <div class="controls">
-                  <input type="text" data-ng-model="newContacto.email" id="email" class="form-control" placeholder="" required>
+                  <input type="number" data-ng-model="newContacto.phone" id="phone" class="form-control" required>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="control-label" for="name">Mensaje:</label>
                 <div class="controls">
-                  <textarea name="message" data-ng-model="newContacto.message" id="message" class="form-control" cols="30" rows="10" placeholder=""></textarea>
+                  <textarea name="message" data-ng-model="newContacto.message" id="message" class="form-control" cols="30" rows="10"></textarea>
                 </div>
               </div>
 
@@ -45,20 +63,6 @@
         <div class="right-side col-md-8">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.4370577608615!2d-58.969072085198604!3d-27.455649622678187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450ce28973040f%3A0xc2eba96858f95963!2sAv+Laprida+2000%2C+H3508AAS+Resistencia%2C+Chaco!5e0!3m2!1sen!2sar!4v1471718108803" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-      </div>
-
-      <div data-ng-show="isLoggedIn">
-        <md-list>
-          <md-subheader class="md-no-sticky">Contactos</md-subheader>
-          <md-list-item class="md-2-line" ng-repeat="contacto in contactos">
-            <div class="md-list-item-text" layout="column">
-              <h4 class="media-heading">{{contacto.name}}</h4>
-              <h4 class="media-heading">{{contacto.email}}</h4>
-              <h6> - {{contacto.message}}</h6>
-            </div>
-            <md-button class="md-secondary" ng-click="deleteContacto(contacto)">Delete</md-button>
-          </md-list-item>
-        </md-list>
       </div>
     </div>
     <div class="row">

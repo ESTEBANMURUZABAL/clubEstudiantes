@@ -6,6 +6,7 @@ var ContactoSchema = new mongoose.Schema({
   name: String,
   email: String,
   message: String,
+  phone: Number,
   answered: Boolean
 });
 
