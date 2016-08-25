@@ -3,19 +3,24 @@
   <div class="main">
     <div class="page-header">
       <h1>¡HACETE SOCIO!</h1>
-      <h4>Completá el formulario a continuación con tus datos y recibirás un correo electrónico con los pasos a seguir para avanzar en tu inscripción.</h4>
+      <br/>
+      <h4>Y empezá a disfrutar de las instalaciones del club durante todo el año. Completá el formulario a continuación con tus datos para pre-inscribirte y luego, acercate a Nicolás Acosta 736 de lunes a viernes de 9.00 a 12.00 hs y de 18.00 a 20.30 hs para completar el tramite.
+        En el caso de desees aplicar a becas deportivas, escribinos a becas@caestudiantes.com.ar y recibirás toda la información.</h4>
     </div>
     <div class="row">
 
     <img class="banner-socios" ng-src="/assets/images/bannerSocios.png" alt=""/>
 
-      <section data-ng-show="isAdmin" data-ng-init="">
+      <section data-ng-show="isAdmin">
         <h2>Socios</h2>
         <div ng-repeat="socio in socios">
           <div class="box-socios">
             <h4 class="media-heading">Socio id:{{socio._id}}</h4>
             <h5 class="media-heading">Socio name:{{socio.name}}</h5>
             <h5 class="media-heading">Socio email:{{socio.email}}</h5>
+            <h5 class="media-heading">Socio domicilio:{{socio.domicilio}}</h5>
+            <h5 class="media-heading">Socio localidad:{{socio.localidad}}</h5>
+            <h5 class="media-heading">Socio provincia:{{socio.provincia}}</h5>
             <h5 class="media-heading">Socio phone:{{socio.phone}}</h5>
             <h5 class="media-heading">Socio dob:{{socio.dob| date:'MM/dd/yyyy'}}</h5>
             <button class="btn btn-success" ng-click="deleteSocio(socio)">Delete</button>
@@ -33,6 +38,27 @@
               <label class="control-label" for="name">Nombre</label>
               <div class="controls">
                 <input type="text" data-ng-model="newSocio.name" id="name" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="domicilio">Domicilio</label>
+              <div class="controls">
+                <input type="text" data-ng-model="newSocio.domicilio" id="domicilio" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="localidad">Localidad</label>
+              <div class="controls">
+                <input type="text" data-ng-model="newSocio.localidad" id="localidad" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="provincia">Provincia</label>
+              <div class="controls">
+                <input type="text" data-ng-model="newSocio.provincia" id="provincia" class="form-control" required>
               </div>
             </div>
 
@@ -56,6 +82,20 @@
                 <input type="number" data-ng-model="newSocio.phone" id="phone" class="form-control" required>
               </div>
             </div>
+
+            <div class="form-group">
+              <label class="control-label" for="socioNuevo">Primera inscripcion?</label><br/>
+              <input type="radio" ng-model="newSocio.socioNuevo" value="true" required/>Si!<br>
+              <input type="radio" ng-model="newSocio.socioNuevo" value="false"/>No!<br>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label" for="categoria">Categoria a inscribirse:</label><br/>
+              <input type="radio" ng-model="newSocio.categoria" value="Grupo familiar" required/>Grupo familiar<br>
+              <input type="radio" ng-model="newSocio.categoria" value="Cadete menor a 18 años"/>Cadete menor a 18 años<br>
+              <input type="radio" ng-model="newSocio.categoria" value="Cadete mayor a 18 años"/>Cadete mayor a 18 años<br>
+            </div>
+
             <button class="btn btn-success" ng-click="addSocio()">Enviar</button>
           </fieldset>
         </form>
