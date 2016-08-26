@@ -1,25 +1,86 @@
-<section data-ng-init="find()">
-  <div class="page-header">
-    <h1>Equipos:</h1>
+<div class="container-fluid">
+  <div class="row main">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>Equipos!</h1>
+      </div>
+        <!-- this is the new search input field -->
+
+        <div class="col-md-6">
+          <!--see teams-->
+          <h1>Ver equipos!</h1>
+            <div data-ng-repeat="equipo in equipos" data-ng-href="#!/equipos/{{equipo._id}}" class="list-group-item">
+              <div class="">
+                <h4 class="media-heading">Club id:{{equipo._id}}</h4>
+                <h5 class="media-heading">Club name:{{equipo.clubName}}</h5>
+                <h5 class="media-heading">Club puntos:{{equipo.puntos}}</h5>
+                <h5 class="media-heading">Club posicion:{{equipo.posicion}}</h5>
+                <h5 class="media-heading">Club imagenEscudo:{{equipo.imagenEscudo}}</h5>
+                <h5 class="media-heading">Club fecha:{{equipo.fecha}}</h5>
+                <h5 class="media-heading">Club rival:{{equipo.rival}}</h5>
+                <button class="btn btn-success" ng-click="deleteEquipo(equipo)">Delete</button>
+                <button class="btn btn-success" ng-click="editEquipo(equipo)">Editar</button>
+                Refresh after deleting messages (tell dev to fix this to do automatically)
+              </div>
+            </div>
+            <br>
+            <br>
+        </div>
+      <!--end see teams-->
+
+      <!--add teams-->
+        <div class="col-md-6">
+          <h1>Agregar equipos!</h1>
+          <form class="form-horizontal" novalidate>
+            <fieldset>
+              <div class="form-group">
+                <label class="control-label" for="clubName">Nombre del club</label>
+                <div class="controls">
+                  <input type="text" data-ng-model="newEquipo.clubName" id="clubName" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="puntos">Puntos</label>
+                <div class="controls">
+                  <input type="number" data-ng-model="newEquipo.puntos" id="puntos" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="posicion">Posicion:</label>
+                <div class="controls">
+                  <input type="number" data-ng-model="newEquipo.posicion" id="posicion" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="imagenEscudo">imagenEscudo:</label>
+                <div class="controls">
+                  <input type="text"  data-ng-model="newEquipo.imagenEscudo" id="imagenEscudo" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="fecha">Proxima fecha de partido:</label>
+                <div class="controls">
+                  <input type="date"  data-ng-model="newEquipo.fecha" id="fecha" class="form-control">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="control-label" for="rival">Rival en la proxima fecha:</label>
+                <div class="controls">
+                  <input type="text" data-ng-model="newEquipo.rival" id="rival" class="form-control">
+                </div>
+              </div>
+
+              <button class="btn btn-success" ng-click="addEquipo()">Agregar equipo</button>
+            </fieldset>
+          </form>
+        </div>
+        <!--end add teams-->
+      </section>
+    </div>
   </div>
-  <!-- this is the new search input field -->
-  <div class="form-group">
-    <input type="text" ng-model="search" typeahead="equipo as equipo.nombre for equipo in equipos | filter:$viewValue | limitTo:8" class="form-control" typeahead-on-select="categorySearch($item)" placeholder="Search Category...">
-  </div>
-  <!-- end -->
-  <div class="list-group">
-    <a data-ng-repeat="equipo in equipos" data-ng-href="#!/equipos/{{equipo._id}}" class="list-group-item">
-      <h4 class="list-group-item-heading" data-ng-bind="equipo.nombre"></h4>
-      <span data-ng-bind="equipo.description"></span>
-      <span data-ng-bind="equipo.proxFecha"></span>
-      <span data-ng-bind="equipo.puntos"></span>
-      <span data-ng-bind="equipo.escudo"></span>
-    </a>
-  </div>
-  <!-- this is the paging control -->
-  <pagination total-items="equipos.length" ng-model="currentPage" ng-change="pageChanged()" max-size="pageSize" ng-show="equipos.length > pageSize"></pagination>
-  <!-- end -->
-  <div class="alert alert-warning text-center" data-ng-hide="!categories.$resolved || categories.length">
-    No categories yet, why don't you <a href="/#!/equipos/crear">create one</a>?
-  </div>
-</section>
+</div>

@@ -6,24 +6,7 @@
         <h1>¡CONTACTANOS!</h1>
       </div>
 
-      <section data-ng-show="isAdmin" data-ng-init="find">
-        <h2>Contactos</h2>
-        <div ng-repeat="contacto in contactos">
-          <div class="box-contactos">
-            <h4 class="media-heading">Contacto id:{{contacto._id}}</h4>
-            <h5 class="media-heading">Contacto name:{{contacto.name}}</h5>
-            <h5 class="media-heading">Contacto email:{{contacto.email}}</h5>
-            <h5 class="media-heading">Contacto phone:{{contacto.phone}}</h5>
-            <h5>Mensaje: {{contacto.message}}</h5>
-            <button class="btn btn-success" ng-click="deleteContacto(contacto)">Delete</button>
-            Refresh after deleting messages (tell dev to fix this to do automatically)
-          </div>
-        </div>
-        <br>
-        <br>
-      </section>
-
-      <div data-ng-show="!isLoggedIn">
+      <div>
         <div class="left-side col-md-4">
           <form class="form-horizontal" novalidate>
             <fieldset>

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clubEstudiantesApp')
-  .controller('ContactoCtrl', function ($scope, $http, ContactoService, socket, $state, Auth) {
+  .controller('VerContactoCtrl', function ($scope, $http, ContactoService, socket, $state, Auth) {
    var self = $scope;
    self.newContacto = {};
 

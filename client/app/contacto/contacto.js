@@ -6,6 +6,14 @@ angular.module('clubEstudiantesApp')
       .state('contacto', {
         url: '/contacto',
         templateUrl: 'app/contacto/contacto.html',
-        controller: 'ContactoCtrl'
+        controller: 'ContactoCtrl',
+        controllerAs: 'contacto'
+      })
+      .state('ver-contactos', {
+        url: '/ver-contactos',
+        templateUrl: 'app/contacto/ver-contactos.html',
+        controller: 'VerContactoCtrl',
+        controllerAs: 'contacto'
       });
+
   });

@@ -5,7 +5,6 @@ angular.module('clubEstudiantesApp')
      var self = $scope;
        self.newEquipo = {};
 
-        self.isAdmin = Auth.isAdmin;
 
        EquipoService.query(function(equipos){
            self.equipos = equipos;

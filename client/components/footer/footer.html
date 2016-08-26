@@ -1,7 +1,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald"/>
 </head>
-<div class="container-fluid ">
+<div class="container-fluid" ng-controller="FooterController">
   <div class="fotter">
     <div class="container">
       <div class="col-md-4 left text-left">
@@ -13,12 +13,12 @@
         <a href="#">More info</a>
       </div>
       <div class="col-md-4 middle text-left">
-        <h3>Pellentesque Sitm</h3>
-        <ul>
-          <li><a href="#"><span> </span>Duis quis dolor felis, aliquet blandit lipsum</a></li>
-          <li><a href="#"><span> </span>Phasellus sed erat augue, non porta untun</a></li>
-          <li><a class="mid1" href="#"><span> </span>Nullam non erat et nisl mattis mollis in unoki</a></li>
-          <li><a class="mid" href="#"><span> </span>Maecenas at ipsum vel eros auctor fausino</a></li>
+        <ul class="">
+          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
+          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
+          <li ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
+          <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+          <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
         </ul>
       </div>
       <div class="col-md-4 left right text-left">
