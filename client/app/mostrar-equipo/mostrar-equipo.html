@@ -9,7 +9,7 @@
         <div class="col-md-6">
           <!--see teams-->
           <h1>Ver equipos!</h1>
-            <div data-ng-repeat="equipo in equipos" data-ng-href="#!/equipos/{{equipo._id}}" class="list-group-item">
+            <div ng-repeat="equipo in equipos" class="list-group-item">
               <div class="">
                 <h4 class="media-heading">Club id:{{equipo._id}}</h4>
                 <h5 class="media-heading">Club name:{{equipo.clubName}}</h5>

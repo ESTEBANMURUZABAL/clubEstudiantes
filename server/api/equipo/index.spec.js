@@ -34,7 +34,7 @@ describe('Equipo API Router:', function() {
     equipoIndex.should.equal(routerStub);
   });
 
-  describe('GET /api/equipos', function() {
+  describe('GET /api/equipo', function() {
 
     it('should route to equipo.controller.index', function() {
       routerStub.get
@@ -44,7 +44,7 @@ describe('Equipo API Router:', function() {
 
   });
 
-  describe('GET /api/equipos/:id', function() {
+  describe('GET /api/equipo/:id', function() {
 
     it('should route to equipo.controller.show', function() {
       routerStub.get
@@ -54,7 +54,7 @@ describe('Equipo API Router:', function() {
 
   });
 
-  describe('POST /api/equipos', function() {
+  describe('POST /api/equipo', function() {
 
     it('should route to equipo.controller.create', function() {
       routerStub.post
@@ -64,7 +64,7 @@ describe('Equipo API Router:', function() {
 
   });
 
-  describe('PUT /api/equipos/:id', function() {
+  describe('PUT /api/equipo/:id', function() {
 
     it('should route to equipo.controller.update', function() {
       routerStub.put
@@ -74,7 +74,7 @@ describe('Equipo API Router:', function() {
 
   });
 
-  describe('PATCH /api/equipos/:id', function() {
+  describe('PATCH /api/equipo/:id', function() {
 
     it('should route to equipo.controller.update', function() {
       routerStub.patch
@@ -84,7 +84,7 @@ describe('Equipo API Router:', function() {
 
   });
 
-  describe('DELETE /api/equipos/:id', function() {
+  describe('DELETE /api/equipo/:id', function() {
 
     it('should route to equipo.controller.destroy', function() {
       routerStub.delete

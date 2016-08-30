@@ -5,7 +5,6 @@ angular.module('clubEstudiantesApp')
      var self = $scope;
        self.newEquipo = {};
 
-
        EquipoService.query(function(equipos){
            self.equipos = equipos;
            socket.syncUpdates('equipo', self.equipos);

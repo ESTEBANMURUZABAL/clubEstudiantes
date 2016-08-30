@@ -5,8 +5,6 @@ angular.module('clubEstudiantesApp')
    var self = $scope;
      self.newSocio = {};
 
-      self.isAdmin = Auth.isAdmin;
-
      SocioService.query(function(socios){
          self.socios = socios;
          socket.syncUpdates('socio', self.socios);

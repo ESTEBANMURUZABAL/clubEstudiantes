@@ -7,12 +7,12 @@ var newEquipo;
 
 describe('Equipo API:', function() {
 
-  describe('GET /api/equipos', function() {
+  describe('GET /api/equipo', function() {
     var equipos;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/equipos')
+        .get('/api/equipo')
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -30,10 +30,10 @@ describe('Equipo API:', function() {
 
   });
 
-  describe('POST /api/equipos', function() {
+  describe('POST /api/equipo', function() {
     beforeEach(function(done) {
       request(app)
-        .post('/api/equipos')
+        .post('/api/equipo')
         .send({
           name: 'New Equipo',
           info: 'This is the brand new equipo!!!'
@@ -56,12 +56,12 @@ describe('Equipo API:', function() {
 
   });
 
-  describe('GET /api/equipos/:id', function() {
+  describe('GET /api/equipo/:id', function() {
     var equipo;
 
     beforeEach(function(done) {
       request(app)
-        .get('/api/equipos/' + newEquipo._id)
+        .get('/api/equipo/' + newEquipo._id)
         .expect(200)
         .expect('Content-Type', /json/)
         .end((err, res) => {
@@ -84,12 +84,12 @@ describe('Equipo API:', function() {
 
   });
 
-  describe('PUT /api/equipos/:id', function() {
+  describe('PUT /api/equipo/:id', function() {
     var updatedEquipo;
 
     beforeEach(function(done) {
       request(app)
-        .put('/api/equipos/' + newEquipo._id)
+        .put('/api/equipo/' + newEquipo._id)
         .send({
           name: 'Updated Equipo',
           info: 'This is the updated equipo!!!'
@@ -116,11 +116,11 @@ describe('Equipo API:', function() {
 
   });
 
-  describe('DELETE /api/equipos/:id', function() {
+  describe('DELETE /api/equipo/:id', function() {
 
     it('should respond with 204 on successful removal', function(done) {
       request(app)
-        .delete('/api/equipos/' + newEquipo._id)
+        .delete('/api/equipo/' + newEquipo._id)
         .expect(204)
         .end((err, res) => {
           if (err) {
@@ -132,7 +132,7 @@ describe('Equipo API:', function() {
 
     it('should respond with 404 when equipo does not exist', function(done) {
       request(app)
-        .delete('/api/equipos/' + newEquipo._id)
+        .delete('/api/equipo/' + newEquipo._id)
         .expect(404)
         .end((err, res) => {
           if (err) {
