@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clubEstudiantesApp')
-  .controller('ContactoCtrl', function ($scope, $http, ContactoService, socket, $state, Auth) {
+  .controller('ContactoCtrl', function ($scope, $http, ContactoService, socket, $state, Auth, Modal) {
    var self = $scope;
    self.newContacto = {};
 
@@ -13,7 +13,7 @@ angular.module('clubEstudiantesApp')
        socket.syncUpdates('contacto', self.contactos);
    });
 
-   self.addContacto = function(){
+    self.addContacto = Modal.confirm.confirm(function() {
      if(!self.newContacto){ return;}
      ContactoService.save(self.newContacto, function(){
        self.newContacto = {};

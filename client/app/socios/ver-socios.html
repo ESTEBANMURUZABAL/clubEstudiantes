@@ -1,19 +1,25 @@
-<section>
-  <h2>Socios</h2>
-  <div ng-repeat="socio in socios">
-    <div class="box-socios">
-      <h4 class="media-heading">Socio id:{{socio._id}}</h4>
-      <h5 class="media-heading">Socio name:{{socio.name}}</h5>
-      <h5 class="media-heading">Socio email:{{socio.email}}</h5>
-      <h5 class="media-heading">Socio domicilio:{{socio.domicilio}}</h5>
-      <h5 class="media-heading">Socio localidad:{{socio.localidad}}</h5>
-      <h5 class="media-heading">Socio provincia:{{socio.provincia}}</h5>
-      <h5 class="media-heading">Socio phone:{{socio.phone}}</h5>
-      <h5 class="media-heading">Socio dob:{{socio.dob| date:'MM/dd/yyyy'}}</h5>
-      <button class="btn btn-success" ng-click="deleteSocio(socio)">Delete</button>
-      Refresh after deleting messages (tell dev to fix this to do automatically)
-    </div>
+<div class="container-fluid">
+  <div class="row main">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h2>Socios</h2>
+      </div>
+
+      <div ng-repeat="socio in socios">
+        <div class="box-socios">
+          <h4 class="media-heading">Socio id:{{socio._id}}</h4>
+          <h5 class="media-heading">Socio name:{{socio.name}}</h5>
+          <h5 class="media-heading">Socio email:{{socio.email}}</h5>
+          <h5 class="media-heading">Socio domicilio:{{socio.domicilio}}</h5>
+          <h5 class="media-heading">Socio localidad:{{socio.localidad}}</h5>
+          <h5 class="media-heading">Socio provincia:{{socio.provincia}}</h5>
+          <h5 class="media-heading">Socio phone:{{socio.phone}}</h5>
+          <h5 class="media-heading">Socio dob:{{socio.dob| date:'MM/dd/yyyy'}}</h5>
+          <button class="btn btn-success" ng-click="deleteSocio(socio)">Delete</button>
+        </div>
+      </div>
+      <br>
+      <br>
+     </div>
   </div>
-  <br>
-  <br>
-</section>
+</div>

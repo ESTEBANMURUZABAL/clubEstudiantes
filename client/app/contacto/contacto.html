@@ -8,26 +8,32 @@
 
       <div>
         <div class="left-side col-md-4">
-          <form class="form-horizontal" novalidate>
+          <form class="form-horizontal" name="contactoForm" >
             <fieldset>
               <div class="form-group">
                 <label class="control-label" for="name">Nombre y Apellido:</label>
                 <div class="controls">
-                  <input type="text" data-ng-model="newContacto.name" id="name" class="form-control" required>
+                  <input type="text" data-ng-model="newContacto.name" id="name" class="form-control" >
+                </div>
+                <div role="alert">
+                  <span class="error" ng-show="contactoForm.name.$error.required">Required!</span>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="control-label" for="name">Correo electrónico:</label>
                 <div class="controls">
-                  <input type="email" data-ng-model="newContacto.email" id="email" class="form-control" required>
+                  <input type="email" data-ng-model="newContacto.email" id="email" class="form-control" >
+                </div>
+                <div role="alert">
+                  <span class="error" ng-show="contactoForm.email.$error.required">Required!</span>
                 </div>
               </div>
 
               <div class="form-group">
                 <label class="control-label" for="name">Teléfono:</label>
                 <div class="controls">
-                  <input type="number" data-ng-model="newContacto.phone" id="phone" class="form-control" required>
+                  <input type="number" ng-minlength="8" ng-maxlength="12" data-ng-model="newContacto.phone" id="phone" class="form-control" required>
                 </div>
               </div>
 
@@ -38,7 +44,7 @@
                 </div>
               </div>
 
-              <button class="btn btn-success" ng-click="addContacto()">Enviar</button>
+              <button class="btn btn-success" ng-click="addContacto(newContacto.name)">Enviar</button>
             </fieldset>
           </form>
         </div>

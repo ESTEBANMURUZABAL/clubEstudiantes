@@ -1,8 +1,3 @@
-.main {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
 .info-stuff {
   margin-top: 10px;
 }
@@ -21,4 +16,14 @@
   margin-top: 2%;
   margin-left:5%;
 
+}
+
+.container-fluid {
+  padding-left: 4%;
+  padding-right: 3%;
+}
+
+.main {
+  margin-left: 10%;
+  margin-right: 10%;
 }
