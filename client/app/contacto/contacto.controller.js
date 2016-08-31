@@ -12,8 +12,8 @@ angular.module('clubEstudiantesApp')
        self.contactos = contactos;
        socket.syncUpdates('contacto', self.contactos);
    });
-
-    self.addContacto = Modal.confirm.confirm(function() {
+    //Modal.confirm.confirm(
+    self.addContacto = function() {
      if(!self.newContacto){ return;}
      ContactoService.save(self.newContacto, function(){
        self.newContacto = {};

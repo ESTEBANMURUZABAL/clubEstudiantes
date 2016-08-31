@@ -13,14 +13,10 @@ angular.module('clubEstudiantesApp')
 
     self.addSlide = function() {
 
-      slides.push({
-          image: '/assets/images/rsz_home1.png',
-          text: ['texto 1'],
-        }/*,
+      slides.push(
         {
-          image: '/assets/images/homeImage.png',
-          text: ['texto 1'],
-        }*/
+          image: '/assets/images/home-image2.png'
+        }
       );
     };
 
