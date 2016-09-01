@@ -8,9 +8,5 @@ angular.module('clubEstudiantesApp')
        this.isAdmin = Auth.isAdmin;
        this.getCurrentUser = Auth.getCurrentUser;
 
-   self.url = $location.url();
-   self.isHomePage = function(){
-    if($location.url() === "") return true;
-    else false;
-   }
+
 });
