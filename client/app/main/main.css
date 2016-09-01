@@ -5,10 +5,20 @@
   padding-right: 0px;
   max-width: 100%;
 }
+
 .carousel-inner > .active {
   left: 0;
   padding-left: 0%;
   padding-right: 0%;
+}
+
+.page-header {
+  margin-top:30px;
+}
+
+.image-text {
+
+  font-size: large;
 }
 
 .propaganda {
@@ -17,19 +27,18 @@
 }
 
 .box {
-  border: solid;
-  border-width: 10px;
-  color: #d30600;
-  margin-top: 1%;
+  margin-top: 2%;
+  margin-right: 0%;
+  margin-left: 0%;
+  padding: 0%;
   background-color:#d3582b;
-
+}
+.md6,
+.md8 {
+  padding: inherit;
+  margin: inherit;
 }
 
-/*                  horarios y fixture    left md-6                           */
-.boxFixtureYhorario  {
-  vertical-align:top;
-    width:50%;
-}
 /*                  noticias                               */
 .noticias {
   box-sizing: content-box;

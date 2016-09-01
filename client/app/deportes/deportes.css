@@ -19,3 +19,16 @@
   max-width: 1000px;
   margin-bottom: 2%;
 }
+
+
+.title {
+  font-family: Times;
+  font-weight: bold;
+}
+.title2 {
+  font-weight: bold;
+}
+#deportes-content {
+  font-family: Gill Sans;
+  text-align: justify;
+}

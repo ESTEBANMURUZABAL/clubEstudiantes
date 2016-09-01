@@ -2,10 +2,11 @@
   <img ng-src="/assets/images/sociosBanner.png">
   <div class="main">
     <div class="page-header">
-      <h1>¡HACETE SOCIO!</h1>
+      <h1 class="title">¡HACETE SOCIO!</h1>
       <br/>
-      <h4>Y empezá a disfrutar de las instalaciones del club durante todo el año. Completá el formulario a continuación con tus datos para pre-inscribirte y luego, acercate a Nicolás Acosta 736 de lunes a viernes de 9.00 a 12.00 hs y de 18.00 a 20.30 hs para completar el tramite.
-        En el caso de desees aplicar a becas deportivas, escribinos a becas@caestudiantes.com.ar y recibirás toda la información.</h4>
+      <div id="socios-content"></div>
+      <p>Y empezá a disfrutar de las instalaciones del club durante todo el año. Completá el formulario a continuación con tus datos para pre-inscribirte y luego, acercate a <b>Nicolás Acosta 736</b> de lunes a viernes de 9.00 a 12.00 hs y de 18.00 a 20.30 hs para completar el tramite.
+        En el caso de desees aplicar a becas deportivas, escribinos a <b>becas@caestudiantes.com.ar</b> y recibirás toda la información.</p>
     </div>
     <div class="row">
 
@@ -64,13 +65,13 @@
             </div>
 
             <div class="form-group">
-              <label class="control-label" for="socioNuevo">Primera inscripcion?</label><br/>
-              <input type="radio" ng-model="newSocio.socioNuevo" value="true" required/>Si!<br>
-              <input type="radio" ng-model="newSocio.socioNuevo" value="false"/>No!<br>
+              <label class="control-label" for="socioNuevo">Se inscribe por primera vez?</label><br/>
+              <input type="radio" ng-model="newSocio.socioNuevo" value="true" required/>Si<br>
+              <input type="radio" ng-model="newSocio.socioNuevo" value="false"/>No<br>
             </div>
 
             <div class="form-group">
-              <label class="control-label" for="categoria">Categoria a inscribirse:</label><br/>
+              <label class="control-label" for="categoria">Categoría a inscribirse:</label><br/>
               <input type="radio" ng-model="newSocio.categoria" value="Grupo familiar" required/>Grupo familiar<br>
               <input type="radio" ng-model="newSocio.categoria" value="Cadete menor a 18 años"/>Cadete menor a 18 años<br>
               <input type="radio" ng-model="newSocio.categoria" value="Cadete mayor a 18 años"/>Cadete mayor a 18 años<br>

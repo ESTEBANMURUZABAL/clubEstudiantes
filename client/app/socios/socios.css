@@ -12,10 +12,16 @@
 
 }
 
-.box-socios {
-  margin-top: 2%;
-  margin-left:5%;
-
+.title {
+  font-family: Times;
+  font-weight: bold;
+}
+.title2 {
+  font-weight: bold;
+}
+#socios-content {
+  font-family: Gill Sans;
+  text-align: justify;
 }
 
 .container-fluid {

@@ -6,27 +6,40 @@ angular.module('clubEstudiantesApp')
 
     self.isAdmin = Auth.isAdmin;
 
-    self.myInterval = 3000;
-    self.noWrapSlides = false;
-    self.active = 0;
-    var slides = self.slides = [];
+    $scope.myInterval = 3000;
+    $scope.noWrapSlides = false;
+    $scope.active = 0;
+    var slides = $scope.slides = [];
+    var currIndex = 0;
 
-    self.addSlide = function() {
+    $scope.addSlide = function() {
 
-      slides.push(
+      slides.push({
+          image: '/assets/images/home1.png',
+          text: ['Club Estudiantes'],
+          id: currIndex++
+        },
         {
-          image: '/assets/images/home-image2.png'
+          image: '/assets/images/home2.png',
+          text: ['Club Estudiantes'],
+          id: currIndex++
+        },
+        {
+          image: '/assets/images/home3.png',
+          text: ['Club Estudiantes'],
+          id: currIndex++
         }
       );
     };
+    //<h4 class="image-text">{{slide.text}}</h4>
 
-    self.randomize = function() {
+    $scope.randomize = function() {
       var indexes = generateIndexesArray();
       assignNewIndexesToSlides(indexes);
     };
 
     for (var i = 0; i < 1; i++) {
-      self.addSlide();
+      $scope.addSlide();
     }
 
     // Randomize logic below
