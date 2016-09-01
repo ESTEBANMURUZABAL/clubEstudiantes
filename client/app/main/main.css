@@ -20,7 +20,10 @@
 
   font-size: large;
 }
-
+.imagen-noticia {
+  width:150px;
+  height:150px;
+}
 .propaganda {
   margin-top: 0.5%;
   width: 100%;

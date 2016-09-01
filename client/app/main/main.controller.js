@@ -6,6 +6,8 @@ angular.module('clubEstudiantesApp')
 
     self.isAdmin = Auth.isAdmin;
 
+    window.scrollTo(0,0);
+
     $scope.myInterval = 3000;
     $scope.noWrapSlides = false;
     $scope.active = 0;

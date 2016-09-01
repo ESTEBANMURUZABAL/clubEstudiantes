@@ -7,6 +7,7 @@ angular.module('clubEstudiantesApp')
 
     this.isAdmin = Auth.isAdmin;
 
+   window.scrollTo(0,0);
 
    ContactoService.query(function(contactos){
        self.contactos = contactos;

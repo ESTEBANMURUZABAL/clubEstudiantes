@@ -4,6 +4,7 @@ angular.module('clubEstudiantesApp')
    .controller('EquipoCtrl', function ($scope, $http, EquipoService, socket, $state, Auth) {
      var self = $scope;
        self.newEquipo = {};
+        window.scrollTo(0,0);
 
        EquipoService.query(function(equipos){
            self.equipos = equipos;

@@ -4,6 +4,7 @@ angular.module('clubEstudiantesApp')
   .controller('SociosCtrl', function ($scope, $http, SocioService, socket, $state, Auth) {
    var self = $scope;
      self.newSocio = {};
+      window.scrollTo(0,0);
 
      SocioService.query(function(socios){
          self.socios = socios;
