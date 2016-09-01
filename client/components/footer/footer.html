@@ -9,11 +9,7 @@
         <p>Es una de las grandes instituciones de la provincia del Chaco que nació en el siglo pasado y que ha crecido deportiva e institucionalmente a lo largo de los años. Un sin número de dirigentes, aficionados, jugadores, profesionales o simple "hinchas" son su gran tesoro y orgullo. </p>
       </div>
       <div class="col-md-4 middle">
-        <ul class="">
-          <!--<li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>-->
-          <li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
-          <li ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-          <li ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+        <div class="">
           <h3>MAPA DEL SITIO</h3>
 
           <div ui-sref="elClub"><a href="">EL CLUB</a></div>
@@ -21,11 +17,16 @@
           <div ui-sref="deportes"><a href="">DEPORTES</a></div>
           <div ui-sref="socios"><a href="">SOCIOS</a></div>
           <div ui-sref="contacto"><a href="">CONTACTO</a></div>
-        </ul>
+
+          <!--<li ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>-->
+          <div ng-hide="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></div>
+          <div ng-show="nav.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></div>
+          <div ng-show="nav.isLoggedIn()"><a ui-sref="logout">Logout</a></div>
+        </div>
       </div>
       <div class="col-md-4 left right text-left">
         <h3>Sumate a nuestro equipo!</h3>
-        <p>Envia tu curriculum o contacto al correo: caestudiantes-res@hotmail.com y contanos tus ideas para el club</p>
+        <p>Enviá tu curriculum o contacto caestudiantes-res@hotmail.com y contanos tus ideas o proyectos para el Club</p>
       </div>
       <div class="clearfix"></div>
     </div>

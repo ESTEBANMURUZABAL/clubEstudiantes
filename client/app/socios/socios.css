@@ -1,5 +1,6 @@
 .info-stuff {
   margin-top: 10px;
+  font-family: 'Oswald', sans-serif;
 }
 
 .banner-socios {
@@ -22,6 +23,7 @@
 #socios-content {
   font-family: Gill Sans;
   text-align: justify;
+  font-size: 18px;
 }
 
 .container-fluid {

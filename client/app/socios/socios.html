@@ -2,21 +2,21 @@
   <img ng-src="/assets/images/sociosBanner.png">
   <div class="main">
     <div class="page-header">
-      <h1 class="title">¡HACETE SOCIO!</h1>
+      <h1 class="title">HACETE SOCIO</h1>
       <br/>
-      <div id="socios-content"></div>
+      <div id="socios-content">
       <p>Y empezá a disfrutar de las instalaciones del club durante todo el año. Completá el formulario a continuación con tus datos para pre-inscribirte y luego, acercate a <b>Nicolás Acosta 736</b> de lunes a viernes de 9.00 a 12.00 hs y de 18.00 a 20.30 hs para completar el tramite.
         En el caso de desees aplicar a becas deportivas, escribinos a <b>becas@caestudiantes.com.ar</b> y recibirás toda la información.</p>
+      </div>
     </div>
     <div class="row">
 
     <img class="banner-socios" ng-src="/assets/images/bannerSocios.png" alt=""/>
-
-      <div class="col-md-4" align="left">
-        <form class="form-horizontal" novalidate>
+      <form class="form-horizontal" novalidate>
+        <div class="col-md-4" align="left">
           <fieldset>
             <div class="form-group">
-              <label class="control-label" for="name">Nombre</label>
+              <label class="control-label" for="name">Nombre y Apellido</label>
               <div class="controls">
                 <input type="text" data-ng-model="newSocio.name" id="name" class="form-control" required>
               </div>
@@ -79,8 +79,8 @@
 
             <button class="btn btn-success" ng-click="addSocio()">Enviar</button>
           </fieldset>
-        </form>
-      </div>
+         </div>
+      </form>
     </div>
   </div>
 </div>
