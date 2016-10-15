@@ -12,6 +12,11 @@
   max-width: 1000px;
 }
 
+.banner{
+  max-width: 1366px;
+  max-height: 255px;
+}
+
 .text-box {
   max-width: 1000px;
 }

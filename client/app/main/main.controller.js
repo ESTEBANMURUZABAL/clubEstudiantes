@@ -17,17 +17,22 @@ angular.module('clubEstudiantesApp')
     $scope.addSlide = function() {
 
       slides.push({
-          image: '/assets/images/home1.png',
+          image: '/assets/images/BANNER_HOME_1-01.png',
           text: ['Club Estudiantes'],
           id: currIndex++
         },
         {
-          image: '/assets/images/home2.png',
+          image: '/assets/images/BANNER_HOME_1-09.png',
           text: ['Club Estudiantes'],
           id: currIndex++
         },
         {
-          image: '/assets/images/home3.png',
+          image: '/assets/images/BANNER_HOME_1-10.png',
+          text: ['Club Estudiantes'],
+          id: currIndex++
+        },
+        {
+          image: '/assets/images/BANNER_HOME_1-11.png',
           text: ['Club Estudiantes'],
           id: currIndex++
         }

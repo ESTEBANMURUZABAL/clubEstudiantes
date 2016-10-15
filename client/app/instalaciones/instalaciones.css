@@ -8,6 +8,14 @@
   margin-right: 10%;
 }
 
+.banner{
+  max-width: 1366px;
+  max-height: 255px;
+}
+
+.carouser-instalaciones{
+
+}
 
 .title {
   font-family: Times;

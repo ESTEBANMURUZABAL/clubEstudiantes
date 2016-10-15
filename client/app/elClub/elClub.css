@@ -6,7 +6,11 @@
 .main {
   margin-left: 20%;
   margin-right: 20%;
+}
 
+.banner{
+  max-width: 1366px;
+  max-height: 255px;
 }
 
 .title {
