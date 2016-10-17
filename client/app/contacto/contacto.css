@@ -10,8 +10,13 @@
 .box-contactos {
   margin-top: 2%;
   margin-left:5%;
-
 }
+
+.banner-contacto{
+  max-width: 1177px;
+  max-height: 255px;
+}
+
 .title {
   font-family: Times;
   font-weight: bold;

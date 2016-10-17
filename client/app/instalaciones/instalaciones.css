@@ -8,13 +8,18 @@
   margin-right: 10%;
 }
 
-.banner{
-  max-width: 1366px;
+.banner-instalaciones{
+  max-width: 1177px;
   max-height: 255px;
 }
 
 .carouser-instalaciones{
 
+}
+
+.box-image {
+  max-width:550px; 
+  max-height:550px;
 }
 
 .title {
