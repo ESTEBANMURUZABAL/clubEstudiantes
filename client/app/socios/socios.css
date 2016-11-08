@@ -12,6 +12,10 @@
   max-height: 255px;
 }
 
+.socio-box{
+  padding:30px;
+}
+
 .title {
   font-family: Times;
   font-weight: bold;

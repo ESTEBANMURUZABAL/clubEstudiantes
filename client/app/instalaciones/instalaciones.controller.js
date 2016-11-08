@@ -9,13 +9,13 @@ angular.module('clubEstudiantesApp')
 
     self.isAdmin = Auth.isAdmin;
 
-    $scope.myInterval = 3000;
-    $scope.noWrapSlides = false;
-    $scope.active = 0;
-    var slides = $scope.slides = [];
+    self.myInterval = 3000;
+    self.noWrapSlides = false;
+    self.active = 0;
+    var slides = self.slides = [];
     var currIndex = 0;
 
-    $scope.addSlide = function() {
+    self.addSlide = function() {
 
       slides.push({
           image: '/assets/images/home1.png',
@@ -36,13 +36,13 @@ angular.module('clubEstudiantesApp')
     };
     //<h4 class="image-text">{{slide.text}}</h4>
 
-    $scope.randomize = function() {
+    self.randomize = function() {
       var indexes = generateIndexesArray();
       assignNewIndexesToSlides(indexes);
     };
 
     for (var i = 0; i < 1; i++) {
-      $scope.addSlide();
+      self.addSlide();
     }
 
     // Randomize logic below

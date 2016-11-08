@@ -12,55 +12,59 @@
     <div class="row">
 
     <img class="cuadro-socios" ng-src="/assets/images/bannerSocios.png" alt=""/>
-      <form class="form-horizontal" novalidate>
-        <div class="col-md-4" align="left">
-          <fieldset>
+      <form name="socios" class="form-horizontal">
+        <fieldset>
+          <div class="col-md-4" align="left">
+
             <div class="form-group">
               <label class="control-label" for="name">Nombre y Apellido</label>
               <div class="controls">
-                <input type="text" data-ng-model="newSocio.name" id="name" class="form-control" required>
+                <input type="text" data-ng-model="newSocio.name" id="name" class="form-control" placeholder="" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="domicilio">Domicilio</label>
               <div class="controls">
-                <input type="text" data-ng-model="newSocio.domicilio" id="domicilio" class="form-control" required>
+                <input type="text" data-ng-model="newSocio.domicilio" id="domicilio" placeholder="" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="localidad">Localidad</label>
               <div class="controls">
-                <input type="text" data-ng-model="newSocio.localidad" id="localidad" class="form-control" required>
+                <input type="text" data-ng-model="newSocio.localidad" id="localidad" placeholder="" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="provincia">Provincia</label>
               <div class="controls">
-                <input type="text" data-ng-model="newSocio.provincia" id="provincia" class="form-control" required>
+                <input type="text" data-ng-model="newSocio.provincia" id="provincia" placeholder="" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="email">Correo electrónico</label>
               <div class="controls">
-                <input type="email" data-ng-model="newSocio.email" id="email" class="form-control" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="control-label" for="dob">Fecha de nacimiento</label>
-              <div class="controls">
-                <input type="date" data-ng-model="newSocio.dob" id="dob" class="form-control" required>
+                <input type="email" data-ng-model="newSocio.email" id="email" placeholder="" class="form-control" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="control-label" for="phone">Número de teléfono</label>
               <div class="controls">
-                <input type="number" data-ng-model="newSocio.phone" id="phone" class="form-control" required>
+                <input type="number" data-ng-model="newSocio.phone" id="phone" placeholder="" class="form-control" required>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4" align="center">
+
+            <div class="form-group">
+              <label class="control-label" for="dob">Fecha de nacimiento</label>
+              <div class="controls">
+                <input type="date" data-ng-model="newSocio.dob" id="dob" class="form-control" required>
               </div>
             </div>
 
@@ -76,10 +80,10 @@
               <input type="radio" ng-model="newSocio.categoria" value="Cadete menor a 18 años"/>Cadete menor a 18 años<br>
               <input type="radio" ng-model="newSocio.categoria" value="Cadete mayor a 18 años"/>Cadete mayor a 18 años<br>
             </div>
+            <button class="btn btn-danger" ng-click="sendMail(newSocio.email)">Enviar</button>
+          </div>
 
-            <button class="btn btn-success" ng-click="sendMail(newSocio.email)">Enviar</button>
-          </fieldset>
-         </div>
+         </fieldset>
       </form>
     </div>
   </div>

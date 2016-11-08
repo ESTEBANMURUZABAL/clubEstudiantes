@@ -9,26 +9,27 @@ angular.module('clubEstudiantesApp')
 
    window.scrollTo(0,0);
 
-  self.sendMail = Modal.confirm.delete(function () {
+/*    if($scope.contactoForm.$valid){*/
+      self.sendMail = Modal.confirm.delete(function () {
 
-    var data = ({
-        contactName : self.newContacto.name,
-        contactEmail : self.newContacto.email,
-        contactMsg : self.newContacto.message,
-        contactPhone : self.newContacto.phone
-    });
+          var data = ({
+              contactName : self.newContacto.name,
+              contactEmail : self.newContacto.email,
+              contactMsg : self.newContacto.message,
+              contactPhone : self.newContacto.phone
+          });
 
-    // Simple POST request example (passing data) :
-    $http.post('/contact-form', data).
-        success(function(data, status, headers, config) {
-            console.log('Success' + data);
-            self.newContacto = {};
-        }).
-        error(function(data, status, headers, config) {
-            console.log('Success' + data);
-            self.newContacto = {};
+          // Simple POST request example (passing data) :
+          $http.post('/contact-form', data).
+              success(function(data, status, headers, config) {
+                  console.log('Success' + data);
+                  self.newContacto = {};
+              }).
+              error(function(data, status, headers, config) {
+                  console.log('Success' + data);
+                  self.newContacto = {};
+              });
         });
-  });
-
+/*    }*/
 
   });

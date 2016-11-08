@@ -1,6 +1,5 @@
 <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarController">
   <div class="container">
-    <div>
     <ul id="navbar">
       <li ui-sref-active="active"><a ui-sref="/">INICIO</a></li>
       <li ui-sref-active="active"><a ui-sref="elClub">EL CLUB</a></li>
@@ -9,9 +8,7 @@
       <li ui-sref-active="active"><a ui-sref="socios">SOCIOS</a></li>
       <li ui-sref-active="active"><a ui-sref="contacto">CONTACTO</a></li>
       <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="admin">ADMIN</a></li>
-      <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="mostrar-equipo">VER EQUIPOS</a></li>
-      <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="ver-socios">VER SOCIOS</a></li>
-      <li ng-show="nav.isAdmin()" ui-sref-active="active"><a ui-sref="ver-contactos">VER CONTACTOS</a></li>
+
     </ul>
     <div class="top-navigation-right">
       <a href="https://twitter.com/CAEstudiantes32"               class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
