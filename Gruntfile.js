@@ -355,27 +355,27 @@ module.exports = function (grunt) {
     },
 
     // Copies remaining files to places other tasks can use
-    copy: {
-      dist: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: '<%= yeoman.client %>',
-          dest: '<%= yeoman.dist %>/<%= yeoman.client %>',
-          src: [
-            '*.{ico,png,txt}',
-            '.htaccess',
-            'bower_components/**/*',
-            'assets/images/{,*/}*.{webp}',
-            'assets/fonts/**/*',
-            'index.html'
-          ]
-        }, {
-          expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/<%= yeoman.client %>/assets/images',
-          src: ['generated/*']
-        }, {
+   copy: {
+       dist: {
+           files: [{
+               expand: true,
+               dot: true,
+               cwd: '<%= config.app %>',
+               dest: '<%= config.dist %>',
+               src: [
+                   '*.{ico,png,txt}',
+                   '.htaccess',
+                   'images/{,*/}*.webp',
+                   '{,*/}*.html',
+                   'styles/fonts/{,*/}*.*'
+               ]
+           },{
+               expand: true,
+               dot: true,
+               cwd: '/bower_components/font-awesome/fonts', // change this for font-awesome
+               src: ['fonts/*.*'],
+               dest: '<%= config.dist %>'
+           }, {
           expand: true,
           dest: '<%= yeoman.dist %>',
           src: [
