@@ -42,14 +42,14 @@ angular.module('clubEstudiantesApp')
                 name = args.shift(),
                 deleteModal;
 
-            deleteModal = openModal({
+              deleteModal = openModal({
               modal: {
                 dismissable: true,
-                title: 'Confirm Delete',
-                html: '<p>Are you sure you want to delete <strong>' + name + '</strong> ?</p>',
+                title: 'Confirmar envio',
+                html: '<p>Gracias por contactarnos. Responderemos en breve a su consulta a su casilla de mensajes: <strong>' + name + '</strong></p>',
                 buttons: [{
                   classes: 'btn-danger',
-                  text: 'Delete',
+                  text: 'Confirmar',
                   click: function(e) {
                     deleteModal.close(e);
                   }

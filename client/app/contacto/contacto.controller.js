@@ -9,37 +9,26 @@ angular.module('clubEstudiantesApp')
 
    window.scrollTo(0,0);
 
-   ContactoService.query(function(contactos){
-       self.contactos = contactos;
-       socket.syncUpdates('contacto', self.contactos);
-   });
-    //Modal.confirm.confirm(
-    self.addContacto = function() {
-     if(!self.newContacto){ return;}
-     ContactoService.save(self.newContacto, function(){
-       self.newContacto = {};
+  self.sendMail = Modal.confirm.delete(function () {
 
-     });
-   };
+    var data = ({
+        contactName : self.newContacto.name,
+        contactEmail : self.newContacto.email,
+        contactMsg : self.newContacto.message,
+        contactPhone : self.newContacto.phone
+    });
 
-   self.deleteContacto = function(contacto) {
-     ContactoService.delete({id:contacto._id}, function(){
-       console.log('contacto deleted')
-     })
-   };
+    // Simple POST request example (passing data) :
+    $http.post('/contact-form', data).
+        success(function(data, status, headers, config) {
+            console.log('Success' + data);
+            self.newContacto = {};
+        }).
+        error(function(data, status, headers, config) {
+            console.log('Success' + data);
+            self.newContacto = {};
+        });
+  });
 
-   self.goToContacto = function(contacto){
-     $state.go('view-contacto', {
-       id: contacto._id
-     });
-   };
-
-  self.goBack = function(){
-    window.history.back();
-  };
-
-   self.$on('$destroy', function() {
-        socket.unsyncUpdates('contacto');
-   });
 
   });

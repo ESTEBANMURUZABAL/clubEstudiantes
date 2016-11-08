@@ -17,6 +17,7 @@ Object.defineProperty(exports, '__esModule', {
 exports.index = index;
 exports.show = show;
 exports.create = create;
+exports.sendMail = sendMail;
 exports.update = update;
 exports.destroy = destroy;
 
@@ -90,6 +91,40 @@ function show(req, res) {
 function create(req, res) {
   _contactoModel2['default'].createAsync(req.body).then(respondWithResult(res, 201))['catch'](handleError(res));
 }
+
+var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport();
+
+/**
+ * Send an email when the contact from is submitted
+ */
+
+function sendMail(req, res) {
+
+  var data = req.body;
+
+  var mailOptions = {
+    from: '"Fred Foo " <estebannmuruzabal@gmail.com>', // sender address
+    to: 'estebannmuruzabal@gmail.com', // list of receivers
+    subject: 'Hello ✔', // Subject line
+    text: 'Hello world', // plaintext body
+    html: '<b>Hello world</b>' // html body
+  };
+
+  var smtpConfig = 'smtps://user%40gmail.com:pass@smtp.gmail.com';
+  var poolConfig = 'smtps://user%40gmail.com:pass@smtp.gmail.com/?pool=true';
+  var directConfig = 'direct:?name=hostname';
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      return console.log(error);
+    }
+    console.log('Message sent: ' + info.response);
+  });
+}
+
+;
 
 // Updates an existing Contacto in the DB
 

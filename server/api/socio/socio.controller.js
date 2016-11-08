@@ -59,6 +59,49 @@ function handleError(res, statusCode) {
   };
 }
 
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
+var smtpTransport = nodemailer.createTransport(smtpTransport({
+    host : "Smtp.gmail.com",
+    secureConnection : false,
+    port: 587,
+    auth : {
+        user : "estebannmuruzabal@gmail.com",
+        pass : "guemes765"
+    }
+}));
+/**
+ * Send an email when the contact from is submitted
+ */
+export function sendMail(req, res) {
+ 
+    var data = req.body;
+ 
+var mailOptions = {
+    from: data.contactEmail,
+    to: 'estebannmuruzabal@gmail.com', // list of receivers
+    subject: 'Mensaje de seccion SOCIO [Club Atletico Estudiantes]', // Subject line
+    text:  '\n Message from ' + data.socioName 
+         + '\n Email: ' + data.socioEmail 
+         + '\n socioDOB:' + data.socioDOB
+         + '\n Domicilio:' + data.socioDomicilio 
+         + '\n socioLocalidad:' + data.socioLocalidad 
+         + '\n socioProvincia:' + data.socioProvincia 
+         + '\n socioPhone:' + data.socioPhone 
+         + '\n socioNuevo:' + data.socioNuevo 
+         + '\n socioCategoria:' + data.socioCategoria ,  
+};  
+
+// send mail with defined transport object
+smtpTransport.sendMail(mailOptions, function(error, info){
+    if(error){
+        return console.log(error);
+    }
+    console.log('Message sent: ' + info.response);
+});
+};
+
 // Gets a list of Socios
 export function index(req, res) {
   Socio.findAsync()

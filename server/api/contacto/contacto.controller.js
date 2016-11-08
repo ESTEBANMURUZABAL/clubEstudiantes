@@ -81,6 +81,47 @@ export function create(req, res) {
     .catch(handleError(res));
 }
 
+var nodemailer = require('nodemailer');
+var smtpTransport = require('nodemailer-smtp-transport');
+
+var smtpTransport = nodemailer.createTransport(smtpTransport({
+    host : "Smtp.gmail.com",
+    secureConnection : false,
+    port: 587,
+    auth : {
+        user : "estebannmuruzabal@gmail.com",
+        pass : "guemes765"
+    }
+}));
+ 
+/**
+ * Send an email when the contact from is submitted
+ */
+export function sendMail(req, res) {
+ 
+    var data = req.body;
+ 
+var mailOptions = {
+    from: data.contactEmail,
+    to: 'estebannmuruzabal@gmail.com', // list of receivers
+    subject: 'Mensaje de seccion contacto [Club Atletico Estudiantes]', // Subject line
+    text:  '\n Message from ' + data.contactName 
+         + '\n Email: ' + data.contactEmail 
+         + '\n Message:' + data.contactMsg 
+         + '\n Phone:' + data.contactPhone,  
+};
+
+
+
+// send mail with defined transport object
+smtpTransport.sendMail(mailOptions, function(error, info){
+    if(error){
+        return console.log(error);
+    }
+    console.log('Message sent: ' + info.response);
+});
+};
+
 // Updates an existing Contacto in the DB
 export function update(req, res) {
   if (req.body._id) {

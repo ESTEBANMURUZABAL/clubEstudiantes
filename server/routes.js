@@ -17,6 +17,12 @@ export default function(app) {
 
   app.use('/auth', require('./auth'));
 
+  var contacto = require('./api/contacto/contacto.controller');
+  var socio = require('./api/socio/socio.controller');
+
+  app.route('/contact-form').post(contacto.sendMail);
+  app.route('/socio-form').post(socio.sendMail);
+
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
    .get(errors[404]);

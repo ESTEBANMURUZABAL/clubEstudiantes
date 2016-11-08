@@ -28,6 +28,10 @@ exports['default'] = function (app) {
 
   app.use('/auth', require('./auth'));
 
+  var contacto = require('./api/contacto/contacto.controller');
+
+  app.route('/contact-form').post(contacto.sendMail);
+
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(_componentsErrors2['default'][404]);
 
