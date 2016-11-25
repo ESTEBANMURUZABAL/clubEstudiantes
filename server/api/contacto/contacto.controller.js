@@ -85,12 +85,12 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 
 var smtpTransport = nodemailer.createTransport(smtpTransport({
-    host : "Smtp.gmail.com",
+    host : "smtp-mail.outlook.com",
     secureConnection : false,
-    port: 587,
+    port: 25,
     auth : {
-        user : "estebannmuruzabal@gmail.com",
-        pass : "guemes765"
+        user : "estebanmuruzabal@hotmail.com",
+        pass : "estebanm"
     }
 }));
  
@@ -103,7 +103,7 @@ export function sendMail(req, res) {
  
 var mailOptions = {
     from: data.contactEmail,
-    to: 'estebannmuruzabal@gmail.com', // list of receivers
+    to: 'estebanmuruzabal@hotmail.com', // list of receivers
     subject: 'Mensaje de seccion contacto [Club Atletico Estudiantes]', // Subject line
     text:  '\n Message from ' + data.contactName 
          + '\n Email: ' + data.contactEmail 
